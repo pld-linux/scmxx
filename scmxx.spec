@@ -17,7 +17,7 @@ ways. You can download and upload phone books, bitmaps, midi files.
 Also it is possible to check current parameters of your phone,
 synchronize its clock, send and get SMS messages.
 
-%description -l tr
+%description -l pl
 SCMXX jest narzêdziem pozwalaj±cym na edycjê telefonu komórkowego
 marki Siemens na wiele ró¿nych sposobów. Dziêki niemu mo¿esz ¶ci±gaæ
 oraz wgrywaæ ksi±¿ki telefoniczne, obrazki, melodie. Jest tak¿e
@@ -36,16 +36,15 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README CHANGELOG BUGS AUTHORS TODO docs/gsmcharset.txt docs/scmxx.1
+install docs/scmxx.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-install docs/scmxx.1.gz $RPM_BUILD_ROOT/%{_mandir}/man1
+gzip -9nf README CHANGELOG BUGS AUTHORS TODO docs/gsmcharset.txt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz *.gz docs/gsmcharset.txt.gz examples
-%defattr(644,root,root,755)
+%doc *.gz docs/gsmcharset.txt.gz examples
 %attr(755,root,root) %{_bindir}/scmxx
-%{_mandir}/man1/scmxx.1.gz
+%{_mandir}/man1/scmxx.1*
