@@ -8,6 +8,7 @@ Group:		Applications/Communications
 Source0:	http://ma2geo.mathematik.uni-karlsruhe.de/~hendrik/scmxx/download/%{name}-%{version}.tar.bz2
 URL:		http://www.hendrik-sattler.de/scmxx/
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,7 +29,7 @@ M35i, C35i, SL45, S45, ME45 i prawdopodobnie innymi.
 %setup  -q
 
 %build
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure
 %{__make} CC=%{__cc}
@@ -37,7 +38,6 @@ aclocal
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
