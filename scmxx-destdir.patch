@@ -16,10 +16,10 @@ diff -ru scmxx-0.5.15/Makefile.in scmxx-0.5.15-AX/Makefile.in
 -	$(INSTALL) scmxx $(bindir)
 -	$(INSTALL) -d $(mandir)/man1
 -	$(INSTALL) docs/scmxx.1 $(mandir)/man1
-+	$(INSTALL) -d $(DESTDIR)/$(bindir) 
-+	$(INSTALL) scmxx $(DESTDIR)/$(bindir)
-+	$(INSTALL) -d $(DESTDIR)/$(mandir)/man1
-+	$(INSTALL) docs/scmxx.1 $(DESTDIR)/$(mandir)/man1
++	$(INSTALL) -d $(DESTDIR)$(bindir) 
++	$(INSTALL) scmxx $(DESTDIR)$(bindir)
++	$(INSTALL) -d $(DESTDIR)$(mandir)/man1
++	$(INSTALL) docs/scmxx.1 $(DESTDIR)$(mandir)/man1
  
  .PHONY: clean
  clean:
