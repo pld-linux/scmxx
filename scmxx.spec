@@ -1,7 +1,7 @@
 Summary:	Tool to edit almost all Siemens mobile phones
 Summary(pl):	Narzêdzie do edycji praktycznie ka¿dego rodzaju telefonu komórkowego Siemens
 Name:		scmxx
-Version:	0.5.15
+Version:	0.6.0
 Release:	1
 License:	GPL
 Group:		Applications/Console
@@ -37,7 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install docs/scmxx.1 $RPM_BUILD_ROOT%{_mandir}/man1
+#install docs/scmxx.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 gzip -9nf README CHANGELOG BUGS AUTHORS TODO docs/gsmcharset.txt
 
@@ -48,4 +48,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz docs/gsmcharset.txt.gz examples
 %attr(755,root,root) %{_bindir}/scmxx
-%{_mandir}/man1/scmxx.1*
+#%{_mandir}/man1/scmxx.1*
