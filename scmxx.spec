@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://ma2geo.mathematik.uni-karlsruhe.de/~hendrik/scmxx/download/%{name}-%{version}.tar.bz2
+# Source0-md5:	5828e17964d65bede3e01d37982d21b4
 URL:		http://www.hendrik-sattler.de/scmxx/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
