@@ -5,8 +5,6 @@ Version:	0.5.10
 Release:	1
 License:	GPL
 Group:		Applications/Console
-Group(de):	Applikationen/Konsole
-Group(pl):	Aplikacje/Konsola
 Source0:	http://www.hendrik-sattler.de/scmxx/download/%{name}-%{version}.tar.bz2
 URL:		http://www.hendrik-sattler.de/scmxx/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
