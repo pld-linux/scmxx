@@ -25,22 +25,28 @@ SMSy. Dzia³a z nastêpuj±cymi modelami: S25, S35i, M35i, C35i, SL45,
 S45, ME45 i prawdopodobnie innymi.
 
 %prep
-%setup  -q
+%setup -q
 
 %build
 %configure
-%{__make} CC=%{__cc}
+%{__make} \
+	CC=%{__cc}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README CHANGELOG BUGS AUTHORS TODO docs examples contrib
 %attr(755,root,root) %{_bindir}/scmxx
 %{_mandir}/man1/%{name}.1*
+%lang(de) %{_mandir}/de/man1/%{name}.1*
+%lang(ru) %{_mandir}/ru/man1/%{name}.1*
