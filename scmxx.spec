@@ -1,7 +1,7 @@
 Summary:	Exchange data SCMxx and Siemens mobile phones
 Summary(pl):	Wymiana danych z urz±dzeniami SCMxx i telefonami Siemens
 Name:		scmxx
-Version:	0.6.1.3
+Version:	0.6.3.2
 Release:	1
 License:	GPL
 Group:		Applications/Communications
