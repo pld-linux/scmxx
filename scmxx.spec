@@ -1,51 +1,50 @@
-Summary:	Tool to edit almost all Siemens mobile phones
-Summary(pl):	Narzêdzie do edycji praktycznie ka¿dego rodzaju telefonu komórkowego Siemens
+Summary:	Exchange data SCMxx and Siemens mobile phones
+Summary(pl):	Wymiana danych z urz±dzeniami SCMxx i telefonami Siemens
 Name:		scmxx
 Version:	0.6.0
-Release:	1
+Release:	2
 License:	GPL
-Group:		Applications/Console
+Group:		Applications/Communications
 Source0:	http://www.hendrik-sattler.de/scmxx/download/%{name}-%{version}.tar.bz2
-Patch0:		%{name}-destdir.patch
 URL:		http://www.hendrik-sattler.de/scmxx/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-SCMXX is a tool that allows editing your Siemens cell phone in many
-ways. You can download and upload phone books, bitmaps, midi files.
-Also it is possible to check current parameters of your phone,
-synchronize its clock, send and get SMS messages.
+SCMxx is a console program that allows you to exchange certain types
+of data with mobile phones made by Siemens. Some of the data types
+that can be exchanged are logos, ring tones, vCalendars, phonebook
+entries, and SMS messages. It works with the following models: S25,
+S35i, M35i and C35i, SL45, S45 and ME45 and probably others.
 
 %description -l pl
-SCMXX jest narzêdziem pozwalaj±cym na edycjê telefonu komórkowego
-marki Siemens na wiele ró¿nych sposobów. Dziêki niemu mo¿esz ¶ci±gaæ
-oraz wgrywaæ ksi±¿ki telefoniczne, obrazki, melodie. Jest tak¿e
-mo¿liwe sprawdzenie aktualnych parametrów Twojego telefonu,
-synchronizacja zegara oraz wysy³anie i odbior wiadomo¶ci SMS.
+SCMxx jest programem który umo¿liwia wymianê niektórych typów
+informacji z telefonami komórkowymi produkcji Siemensa, w
+szczególno¶ci logo, dzwonki, wpisy kalendarza i ksi±¿ki telefoncznej,
+SMSy. Dzia³a z nastêpuj±cymi modelami: S25, S35i, M35i, C35i, SL45,
+S45, ME45 i prawdopodobnie innymi.
 
 %prep
 %setup  -q
-%patch0 -p1
 
 %build
-%configure2_13
+aclocal
+autoconf
+%configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-#install docs/scmxx.1 $RPM_BUILD_ROOT%{_mandir}/man1
+mv docs/README docs/README.info
 
-gzip -9nf README CHANGELOG BUGS AUTHORS TODO docs/gsmcharset.txt
+gzip -9nf README CHANGELOG BUGS AUTHORS TODO docs/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz docs/gsmcharset.txt.gz examples
+%doc *.gz docs/*.gz examples contrib
 %attr(755,root,root) %{_bindir}/scmxx
-#%{_mandir}/man1/scmxx.1*
