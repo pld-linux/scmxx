@@ -28,7 +28,7 @@ S45, ME45 i prawdopodobnie innymi.
 
 %build
 aclocal
-autoconf
+%{__autoconf}
 %configure
 %{__make}
 
