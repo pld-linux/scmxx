@@ -1,0 +1,25 @@
+diff -ru scmxx-0.5.15/Makefile.in scmxx-0.5.15-AX/Makefile.in
+--- scmxx-0.5.15/Makefile.in	Tue Mar 12 18:10:22 2002
++++ scmxx-0.5.15-AX/Makefile.in	Mon Mar 25 15:34:01 2002
+@@ -1,5 +1,6 @@
+ SHELL=@SHELL@
+ 
++DESTDIR=@DESTDIR@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ bindir=@bindir@
+@@ -41,10 +42,10 @@
+ 
+ .PHONY: install
+ install: do-it-all
+-	$(INSTALL) -d $(bindir) 
+-	$(INSTALL) scmxx $(bindir)
+-	$(INSTALL) -d $(mandir)/man1
+-	$(INSTALL) docs/scmxx.1 $(mandir)/man1
++	$(INSTALL) -d $(DESTDIR)/$(bindir) 
++	$(INSTALL) scmxx $(DESTDIR)/$(bindir)
++	$(INSTALL) -d $(DESTDIR)/$(mandir)/man1
++	$(INSTALL) docs/scmxx.1 $(DESTDIR)/$(mandir)/man1
+ 
+ .PHONY: clean
+ clean:
