@@ -1,11 +1,12 @@
 Summary:	Tool to edit almost all Siemens mobile phones
 Summary(pl):	Narzêdzie do edycji praktycznie ka¿dego rodzaju telefonu komórkowego Siemens
 Name:		scmxx
-Version:	0.5.10
+Version:	0.5.15
 Release:	1
 License:	GPL
 Group:		Applications/Console
 Source0:	http://www.hendrik-sattler.de/scmxx/download/%{name}-%{version}.tar.bz2
+Patch0:		%{name}-destdir.patch
 URL:		http://www.hendrik-sattler.de/scmxx/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,8 +25,10 @@ synchronizacja zegara oraz wysy³anie i odbior wiadomo¶ci SMS.
 
 %prep
 %setup  -q
+%patch0 -p1
 
 %build
+%configure2_13
 %{__make}
 
 %install
