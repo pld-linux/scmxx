@@ -18,10 +18,10 @@ S35i, M35i and C35i, SL45, S45 and ME45 and probably others.
 
 %description -l pl
 SCMxx jest programem który umo¿liwia wymianê niektórych typów
-informacji z telefonami komórkowymi produkcji Siemensa,
-w szczególno¶ci logo, dzwonki, wpisy kalendarza i ksi±¿ki
-telefonicznej, SMSy. Dzia³a z nastêpuj±cymi modelami: S25, S35i,
-M35i, C35i, SL45, S45, ME45 i prawdopodobnie innymi.
+informacji z telefonami komórkowymi produkcji Siemensa, w szczegól-
+no¶ci logo, dzwonki, wpisy kalendarza i ksi±¿ki telefonicznej, SMSy.
+Dzia³a z nastêpuj±cymi modelami: S25, S35i, M35i, C35i, SL45, S45,
+ME45 i prawdopodobnie innymi.
 
 %prep
 %setup  -q
@@ -41,5 +41,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README CHANGELOG BUGS AUTHORS TODO docs examples contrib
-%{_mandir}/man1/%{name}.1*
 %attr(755,root,root) %{_bindir}/scmxx
+%{_mandir}/man1/%{name}.1*
