@@ -5,7 +5,7 @@ Version:	0.7.4
 Release:	1
 License:	GPL
 Group:		Applications/Communications
-Source0:	http://dl.sourceforge.net/sourceforge/scmxx/%{name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/scmxx/%{name}-%{version}.tar.bz2
 # Source0-md5:	3139f8ce4da47b684851fed208e6d41e
 URL:		http://www.hendrik-sattler.de/scmxx/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,7 +30,7 @@ S45, ME45 i prawdopodobnie innymi.
 %build
 %configure
 %{__make} \
-	CC=%{__cc}
+	CC="%{__cc}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
