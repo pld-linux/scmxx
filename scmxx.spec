@@ -1,11 +1,11 @@
 Summary:	Exchange data SCMxx and Siemens mobile phones
 Summary(pl):	Wymiana danych z urz±dzeniami SCMxx i telefonami Siemens
 Name:		scmxx
-Version:	0.6.0
-Release:	2
+Version:	0.6.1.2
+Release:	1
 License:	GPL
 Group:		Applications/Communications
-Source0:	http://www.hendrik-sattler.de/scmxx/download/%{name}-%{version}.tar.bz2
+Source0:	http://ma2geo.mathematik.uni-karlsruhe.de/~hendrik/scmxx/download/%{name}-%{version}.tar.bz2
 URL:		http://www.hendrik-sattler.de/scmxx/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,14 +30,12 @@ S45, ME45 i prawdopodobnie innymi.
 aclocal
 %{__autoconf}
 %configure
-%{__make}
+%{__make} CC=%{__cc}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-
-mv docs/README docs/README.info
 
 gzip -9nf README CHANGELOG BUGS AUTHORS TODO docs/*
 
