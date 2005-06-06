@@ -8,6 +8,7 @@ Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/scmxx/%{name}-%{version}.tar.bz2
 # Source0-md5:	6e2a770a1234f0e5fd7703c5ff96dc69
 URL:		http://www.hendrik-sattler.de/scmxx/
+BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
