@@ -1,5 +1,5 @@
 Summary:	Exchange data SCMxx and Siemens mobile phones
-Summary(pl.UTF-8):   Wymiana danych z urządzeniami SCMxx i telefonami Siemens
+Summary(pl.UTF-8):	Wymiana danych z urządzeniami SCMxx i telefonami Siemens
 Name:		scmxx
 Version:	0.8.0
 Release:	1
