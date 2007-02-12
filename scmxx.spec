@@ -1,5 +1,5 @@
 Summary:	Exchange data SCMxx and Siemens mobile phones
-Summary(pl):	Wymiana danych z urz±dzeniami SCMxx i telefonami Siemens
+Summary(pl.UTF-8):   Wymiana danych z urzÄ…dzeniami SCMxx i telefonami Siemens
 Name:		scmxx
 Version:	0.8.0
 Release:	1
@@ -20,11 +20,11 @@ that can be exchanged are logos, ring tones, vCalendars, phonebook
 entries, and SMS messages. It works with the following models: S25,
 S35i, M35i and C35i, SL45, S45 and ME45 and probably others.
 
-%description -l pl
-SCMxx jest programem który umo¿liwia wymianê niektórych typów
-informacji z telefonami komórkowymi produkcji Siemensa, w
-szczególno¶ci logo, dzwonki, wpisy kalendarza i ksi±¿ki telefonicznej,
-SMSy. Dzia³a z nastêpuj±cymi modelami: S25, S35i, M35i, C35i, SL45,
+%description -l pl.UTF-8
+SCMxx jest programem ktÃ³ry umoÅ¼liwia wymianÄ™ niektÃ³rych typÃ³w
+informacji z telefonami komÃ³rkowymi produkcji Siemensa, w
+szczegÃ³lnoÅ›ci logo, dzwonki, wpisy kalendarza i ksiÄ…Å¼ki telefonicznej,
+SMSy. DziaÅ‚a z nastÄ™pujÄ…cymi modelami: S25, S35i, M35i, C35i, SL45,
 S45, ME45 i prawdopodobnie innymi.
 
 %prep
