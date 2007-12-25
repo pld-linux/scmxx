@@ -2,13 +2,13 @@ Summary:	Exchange data SCMxx and Siemens mobile phones
 Summary(pl.UTF-8):	Wymiana danych z urządzeniami SCMxx i telefonami Siemens
 Name:		scmxx
 Version:	0.9.0
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/scmxx/%{name}-%{version}.tar.bz2
 # Source0-md5:	9ed8fe297b39ed1c4d3606e40620835e
 URL:		http://www.hendrik-sattler.de/scmxx/
-BuildRequires:	docbook2X
+BuildRequires:	docbook-utils
 BuildRequires:	gettext-devel
 BuildRequires:	libxslt-progs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
