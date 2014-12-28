@@ -9,7 +9,7 @@ Source0:	http://dl.sourceforge.net/scmxx/%{name}-%{version}.tar.bz2
 # Source0-md5:	9ed8fe297b39ed1c4d3606e40620835e
 URL:		http://www.hendrik-sattler.de/scmxx/
 BuildRequires:	docbook-utils
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	libxslt-progs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
